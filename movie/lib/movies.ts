@@ -15,7 +15,7 @@ export const Movies = [
      score: 6.9, 
      image:"images/m3.png"
     },
-    {id:4,
+    {id:4 ,
      title:"From the Ashes", 
      score: 6.9, 
      image:"images/m4.png"
@@ -49,6 +49,30 @@ export const Movies = [
      title:"Sonic the Hedgehog 3", 
      score: 6.9, 
      image:"images/m10.png"
-    }
-    
+    }, 
+    {id:11,
+     title:"Solo Leveling: ReAwakening", 
+     score: 6.9, 
+     image:"images/m8.png"
+    },
+    {id:12,
+     title:"Get Away", 
+     score: 6.9, 
+     image:"images/m9.png"
+    },
+    {id:13,
+     title:"Sonic the Hedgehog 3", 
+     score: 6.9, 
+     image:"images/m10.png"
+    },
+    {id:14,
+     title:"Get Away", 
+     score: 6.9, 
+     image:"images/m9.png"
+    },
+    {id:15,
+     title:"Sonic the Hedgehog 3", 
+     score: 6.9, 
+     image:"images/m10.png"
+    },
 ]
