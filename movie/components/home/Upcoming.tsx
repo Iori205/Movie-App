@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { MovieCard } from "@/components/ui/MovieCard";
+import { MovieCard } from "@/components/home/Card";
 
 type MovieType = {
   original_title: string;
@@ -9,12 +9,12 @@ type MovieType = {
   vote_average: number;
 };
 
-function Movie() {
+function UpComing() {
   const [movieList, setMovieList] = useState<MovieType[] | undefined>();
 
   const getMovie = () => {
     fetch(
-      "https://api.themoviedb.org/3/discover/movie?api_key=55af3480ca26d83a32c17fa221b191fb"
+      "https://api.themoviedb.org/3/movie/upcoming?api_key=55af3480ca26d83a32c17fa221b191fb"
     )
       .then((res) => res.json())
       .then((json) => setMovieList(json.results));
@@ -26,7 +26,7 @@ function Movie() {
   console.log(movieList);
   return (
     <div className="flex flex-wrap gap-8 justify-center">
-      {movieList?.map((movie) => (
+      {movieList?.slice(0, 10).map((movie) => (
         <div>
           <MovieCard
             title={movie.original_title}
@@ -39,4 +39,4 @@ function Movie() {
   );
 }
 
-export default Movie;
+export default UpComing;
