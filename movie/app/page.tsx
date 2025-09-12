@@ -15,25 +15,31 @@ export default async function Home() {
 
   return (
     <div className="max-w-[1440px] m-auto">
-      <MovieCarousel movies={nowPlayingMovies.results} />
-      <MoviesContainer
-        movies={upcomingMovies.results}
-        title="Upcoming"
+      <MovieCarousel
+        movies={nowPlayingMovies.results}
         sliceprops={0}
-        sliceprops2={10}
+        sliceprops2={5}
       />
-      <MoviesContainer
-        sliceprops={0}
-        sliceprops2={10}
-        movies={popularMovies.results}
-        title="Popular"
-      />
-      <MoviesContainer
-        sliceprops={0}
-        sliceprops2={10}
-        movies={topRatedMovies.results}
-        title="Top Rated"
-      />
+      <div>
+        <MoviesContainer
+          movies={upcomingMovies.results}
+          title="Upcoming"
+          sliceprops={0}
+          sliceprops2={10}
+        />
+        <MoviesContainer
+          sliceprops={0}
+          sliceprops2={10}
+          movies={popularMovies.results}
+          title="Popular"
+        />
+        <MoviesContainer
+          sliceprops={0}
+          sliceprops2={10}
+          movies={topRatedMovies.results}
+          title="Top Rated"
+        />
+      </div>
     </div>
   );
 }

@@ -16,9 +16,15 @@ import { Fullscreen } from "lucide-react";
 
 type MovieCarouselProps = {
   movies: MovieType[];
+  sliceprops: number | undefined;
+  sliceprops2: number | undefined;
 };
 
-export function MovieCarousel({ movies }: MovieCarouselProps) {
+export function MovieCarousel({
+  movies,
+  sliceprops,
+  sliceprops2,
+}: MovieCarouselProps) {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
@@ -40,17 +46,17 @@ export function MovieCarousel({ movies }: MovieCarouselProps) {
     <>
       <Carousel setApi={setApi} className="">
         <CarouselContent>
-          {movies.map((movie, index) => (
+          {movies.slice(sliceprops, sliceprops2).map((movie, index) => (
             <CarouselItem key={index}>
               <div className="p-1">
                 <Card>
-                  <CardContent className="flex aspect-video max-h-[600px] items-center justify-center p-6">
+                  <CardContent className="flex aspect-video max-h-[600px] items-center justify-center p-6 relative ">
                     <img
-                      className="relative"
-                      src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+                      className="absolute"
+                      src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
                       alt=""
-                      // height={600}
-                      // width={1440}
+                      height={600}
+                      width={1440}
                     />
                     <span className="text-4xl font-semibold absolute">
                       {movie.title}
@@ -64,7 +70,7 @@ export function MovieCarousel({ movies }: MovieCarouselProps) {
         <CarouselPrevious className="left-13" />
         <CarouselNext className="right-13" />
       </Carousel>
-      <div className="flex gap-2">
+      <div className="flex gap-2 absolute">
         {Array.from({ length: count }).map((_, index) => (
           <div
             onClick={() => {

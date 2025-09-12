@@ -15,7 +15,7 @@ export const MoviesContainer = ({
   sliceprops2,
 }: MoviesContainerProps) => {
   return (
-    <div>
+    <div className="max-w-[1440px] m-auto px-20">
       <h2 className="text-3xl font-bold">{title}</h2>
       <div className="flex gap-8 flex-wrap">
         {movies.slice(sliceprops, sliceprops2).map((movie) => (
