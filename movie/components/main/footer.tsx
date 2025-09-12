@@ -2,7 +2,7 @@ import { MdOutlineMail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 export const Footer = () => {
   return (
-    <footer className="bg-indigo-700 h-[280px] w-[1440px] m-auto mt-[51px]">
+    <footer className="bg-indigo-700 max-h-[280px] max-w-[1440px] m-auto mt-[51px]">
       <div className="px-[80px] py-[40px] flex justify-between">
         <div>
           <div className="flex gap-2 pb-3">

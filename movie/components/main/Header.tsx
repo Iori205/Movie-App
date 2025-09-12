@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <div className="w-[1440px] flex justify-between items-center p-3 mb-3 px-17 m-auto">
+    <div className="max-w-[1440px] flex justify-between items-center p-3 mb-3 px-17 m-auto">
       <Link href="">
         <div className="flex gap-2">
           <img className="w-[16px] h-[16px]" src="images/Vector.png" alt="" />

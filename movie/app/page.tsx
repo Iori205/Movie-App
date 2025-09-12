@@ -1,62 +1,39 @@
-import { BigCard } from "@/components/home/MovieCard";
-import Popular from "@/components/home/Popular";
-import TopRated from "@/components/home/Top-Rated";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import UpComing from "@/components/home/Upcoming";
-import { GrLinkNext } from "react-icons/gr";
+import { MoviesContainer } from "@/components/home/MoviesContainer";
+import { MovieCarousel } from "@/components/home/MovieCarousel";
+import { movieResponseType } from "@/types";
+import { getMoviesList } from "@/utils/get-data";
 
-export default function Home() {
+export default async function Home() {
+  const upcomingMovies: movieResponseType = await getMoviesList("upcoming");
+  const popularMovies: movieResponseType = await getMoviesList("popular");
+  const topRatedMovies: movieResponseType = await getMoviesList("top_rated");
+  const nowPlayingMovies: movieResponseType = await getMoviesList(
+    "now_playing"
+  );
+
+  console.log(upcomingMovies);
+
   return (
-    <div className="w-[1440px] m-auto">
-      <div>
-        <div>
-          <BigCard></BigCard>
-        </div>
-        <div className="h-[52px]"></div>
-        <div>
-          <div>
-            <div className="flex justify-between px-[80px] pb-8">
-              <p className="text-2xl leading-8 font-semibold text-[#09090B]">
-                Upcoming
-              </p>
-              <Link href="/See-more">
-                <Button className="hv: bg-neutral-200" variant="outline">
-                  See more
-                  <GrLinkNext />
-                </Button>
-              </Link>
-            </div>
-            <UpComing />
-          </div>
-          {/*  */}
-          <div>
-            <div className="flex justify-between px-[80px] py-8">
-              <p className="text-2xl leading-8 font-semibold text-[#09090B]">
-                Popular
-              </p>
-              <Button className="hv: bg-neutral-200" variant="outline">
-                See more
-                <GrLinkNext />
-              </Button>
-            </div>
-            <Popular />
-          </div>
-          {/*  */}
-          <div>
-            <div className="flex justify-between  px-[80px] py-8">
-              <p className="text-2xl leading-8 font-semibold text-[#09090B]">
-                Top Rated
-              </p>
-              <Button className="hv: bg-neutral-200" variant="outline">
-                See more
-                <GrLinkNext />
-              </Button>
-            </div>
-            <TopRated />
-          </div>
-        </div>
-      </div>
+    <div className="max-w-[1440px] m-auto">
+      <MovieCarousel movies={nowPlayingMovies.results} />
+      <MoviesContainer
+        movies={upcomingMovies.results}
+        title="Upcoming"
+        sliceprops={0}
+        sliceprops2={10}
+      />
+      <MoviesContainer
+        sliceprops={0}
+        sliceprops2={10}
+        movies={popularMovies.results}
+        title="Popular"
+      />
+      <MoviesContainer
+        sliceprops={0}
+        sliceprops2={10}
+        movies={topRatedMovies.results}
+        title="Top Rated"
+      />
     </div>
   );
 }
