@@ -3,6 +3,7 @@ import { ThemeMenu } from "../ui/ThemeMenu";
 import { Genre } from "./list";
 import { Input } from "../ui/input";
 import Link from "next/link";
+import { GenreDropdown } from "@/components/home/Genre";
 
 export const Header = () => {
   return (
@@ -16,7 +17,7 @@ export const Header = () => {
         </div>
       </Link>
       <div className="flex gap-3">
-        <Genre></Genre>
+        <GenreDropdown />
         <Input placeholder="Shearch.." className="w-[379px] h-[36px]" />
       </div>
       <ThemeMenu />
