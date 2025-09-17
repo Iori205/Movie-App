@@ -49,10 +49,10 @@ export function MovieCarousel({
           {movies.slice(sliceprops, sliceprops2).map((movie, index) => (
             <CarouselItem key={index}>
               <div className="p-1">
-                <Card>
-                  <CardContent className="flex aspect-video max-h-[600px] items-center justify-center p-6 relative ">
+                <Card className="p-0">
+                  <CardContent className="flex aspect-video w-full max-h-[600px] items-center justify-center relative ">
                     <img
-                      className="absolute"
+                      className="absolute w-full h-full"
                       src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
                       alt=""
                       height={600}
