@@ -31,7 +31,6 @@ export const MoviesContainer = ({
         </Link>
       </div>
       <div className="flex gap-8 flex-wrap">
-        <link>
           {movies.slice(sliceprops, sliceprops2).map((movie) => (
             <MovieCard
             id={movie.id}
@@ -41,7 +40,6 @@ export const MoviesContainer = ({
               image={movie.poster_path}
             />
           ))}
-       </link>
         
       </div>
     </div>
