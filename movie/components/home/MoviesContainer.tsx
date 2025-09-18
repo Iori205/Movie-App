@@ -31,15 +31,18 @@ export const MoviesContainer = ({
         </Link>
       </div>
       <div className="flex gap-8 flex-wrap">
-        {movies.slice(sliceprops, sliceprops2).map((movie) => (
-          <MovieCard
+        <link>
+          {movies.slice(sliceprops, sliceprops2).map((movie) => (
+            <MovieCard
             id={movie.id}
             key={movie.id}
             title={movie.title}
             score={movie.vote_average}
-            image={movie.poster_path}
-          />
-        ))}
+              image={movie.poster_path}
+            />
+          ))}
+       </link>
+        
       </div>
     </div>
   );

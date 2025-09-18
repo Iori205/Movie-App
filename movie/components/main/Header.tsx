@@ -4,6 +4,8 @@ import { Genre } from "./list";
 import { Input } from "../ui/input";
 import Link from "next/link";
 import { GenreDropdown } from "@/components/home/Genre";
+import {SearchSection} from "@/components/home/ShearcSection"
+import { Search } from "lucide-react";
 
 export const Header = () => {
   return (
@@ -18,7 +20,10 @@ export const Header = () => {
       </Link>
       <div className="flex gap-3">
         <GenreDropdown />
-        <Input placeholder="Shearch.." className="w-[379px] h-[36px]" />
+        {/* <Input placeholder="Shearch.." className="w-[379px] h-[36px]" /> */}
+        <div>
+            <SearchSection />
+        </div>
       </div>
       <ThemeMenu />
     </div>
