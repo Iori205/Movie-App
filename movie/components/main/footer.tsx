@@ -16,39 +16,41 @@ export const Footer = () => {
           </p>
         </div>
 
-        <div>
-          <p className="text-[#FAFAFA]">Contact Information</p>
-          <div className="flex items-center gap-3 pt-3">
-            <MdOutlineMail color="white" width={16} height={16} />
-            <div>
-              <div className="text-[#FAFAFA]">Email:</div>
-              <div className="text-[#FAFAFA]">support@movieZ.com</div>
+        <div className="flex gap-[96px]">
+          <div>
+            <p className="text-[#FAFAFA]">Contact Information</p>
+            <div className="flex items-center gap-3 pt-3">
+              <MdOutlineMail color="white" width={16} height={16} />
+              <div>
+                <div className="text-[#FAFAFA]">Email:</div>
+                <div className="text-[#FAFAFA]">support@movieZ.com</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 pt-3">
+              <FaPhoneAlt color="white" width={16} height={16} />
+              <div>
+                <div className="text-[#FAFAFA]">Phone:</div>
+                <div className="text-[#FAFAFA]">+976 (11) 123-4567</div>
+              </div>
             </div>
           </div>
-          <div className="flex items-center gap-3 pt-3">
-            <FaPhoneAlt color="white" width={16} height={16} />
-            <div>
-              <div className="text-[#FAFAFA]">Phone:</div>
-              <div className="text-[#FAFAFA]">+976 (11) 123-4567</div>
-            </div>
-          </div>
-        </div>
 
-        <div>
-          <p className="text-[#FAFAFA] font-normal pb-3">Follow us</p>
-          <div className="flex gap-3">
-            <p className="text-[#FAFAFA] text-sm font-medium leading-5">
-              Facebook
-            </p>
-            <p className="text-[#FAFAFA] text-sm font-medium leading-5">
-              Instagram
-            </p>
-            <p className="text-[#FAFAFA] text-sm font-medium leading-5">
-              Twitter
-            </p>
-            <p className="text-[#FAFAFA] text-sm font-medium leading-5">
-              Youtube
-            </p>
+          <div>
+            <p className="text-[#FAFAFA] font-normal pb-3">Follow us</p>
+            <div className="flex gap-3">
+              <p className="text-[#FAFAFA] text-sm font-medium leading-5">
+                Facebook
+              </p>
+              <p className="text-[#FAFAFA] text-sm font-medium leading-5">
+                Instagram
+              </p>
+              <p className="text-[#FAFAFA] text-sm font-medium leading-5">
+                Twitter
+              </p>
+              <p className="text-[#FAFAFA] text-sm font-medium leading-5">
+                Youtube
+              </p>
+            </div>
           </div>
         </div>
       </div>
