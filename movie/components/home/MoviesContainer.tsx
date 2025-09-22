@@ -7,6 +7,7 @@ import { GrLinkNext } from "react-icons/gr";
 type MoviesContainerProps = {
   movies: MovieType[];
   title: string;
+  link: string;
   sliceprops: number | undefined;
   sliceprops2: number;
 };
@@ -14,6 +15,7 @@ type MoviesContainerProps = {
 export const MoviesContainer = ({
   movies,
   title,
+  link,
   sliceprops,
   sliceprops2,
 }: MoviesContainerProps) => {
@@ -21,7 +23,7 @@ export const MoviesContainer = ({
     <div className="max-w-[1440px] m-auto px-20">
       <div className="flex justify-between pt-[52px] pb-[36px]">
         <h2 className="text-3xl font-bold">{title}</h2>
-        <Link href="/See-more">
+        <Link href={`/see-more?title=${link}`}>
           <Button
             variant="ghost"
             className="text-sm text-[#09090B] font-medium leading-5"

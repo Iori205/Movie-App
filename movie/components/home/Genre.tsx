@@ -16,7 +16,7 @@ import { GenreResponseType } from "@/types";
 export async function GenreDropdown() {
   const genresResponse: GenreResponseType = await getMovieGenres();
 
-  console.log("GENRE RES", genresResponse);
+  // console.log("GENRE RES", genresResponse);
 
   return (
     <DropdownMenu>
