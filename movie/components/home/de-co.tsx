@@ -1,6 +1,6 @@
 import { FaStar } from "react-icons/fa";
-import {getMovieDetail} from "@/utils/get-data"
- 
+import { getMovieDetail } from "@/utils/get-data";
+
 // import { Youtubedialog } from "./Youtubedialog";
 type Crewtype = {
   name: string;
@@ -13,7 +13,7 @@ type MovieCardProps = {
   title: string;
   Score: number;
   Image: string;
-  id: string;
+  id: number;
   releasedate: string;
   runtime: number;
   backdrop_path: string;
@@ -22,10 +22,10 @@ type MovieCardProps = {
   crew: Crewtype[];
   cast: Crewtype[];
   vote_count: number;
-  Movietrailer: any;
-  type: string;
+  // Movietrailer: any;
+  // type: string;
 };
- 
+
 export const Moviedescribecard = ({
   title,
   Score,
@@ -38,9 +38,9 @@ export const Moviedescribecard = ({
   crew,
   cast,
   vote_count,
-  Movietrailer,
-  type,
-}: MovieCardProps) => {
+}: // Movietrailer,
+// type,
+MovieCardProps) => {
   return (
     <div className="w-[1068px] h-fit ml-42">
       {" "}
@@ -51,7 +51,7 @@ export const Moviedescribecard = ({
             {releasedate} PG {Math.floor(runtime / 60)} h {runtime % 60} min
           </div>
         </div>
- 
+
         <div>
           {" "}
           <div className="text-[12px]">Rating</div>
@@ -73,7 +73,7 @@ export const Moviedescribecard = ({
           height={450}
           width={290}
         />
- 
+
         {/* <div>
           <Youtubedialog
             image={backdrop_path}
@@ -134,4 +134,3 @@ export const Moviedescribecard = ({
     </div>
   );
 };
- 

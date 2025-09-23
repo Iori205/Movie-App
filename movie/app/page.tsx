@@ -22,21 +22,21 @@ export default async function Home() {
       />
       <div>
         <MoviesContainer
-        link="upcoming"
+          link="upcoming"
           movies={upcomingMovies.results}
           title="Upcoming"
           sliceprops={0}
           sliceprops2={10}
         />
         <MoviesContainer
-        link="popular"
+          link="popular"
           sliceprops={0}
           sliceprops2={10}
           movies={popularMovies.results}
           title="Popular"
         />
         <MoviesContainer
-        link="top_rated"
+          link="top_rated"
           sliceprops={0}
           sliceprops2={10}
           movies={topRatedMovies.results}

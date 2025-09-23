@@ -1,3 +1,5 @@
+import Movieid from "@/app/detail/page";
+
 export const getMoviesList = async (listName: string) => {
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${listName}?language=en-US&page=1`,
@@ -36,7 +38,7 @@ export const getMoviesByGenreId = async (genreIds: string, page: string) => {
       headers: {
         accept: "application/json",
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_KEY_TMDB_ACCESS_KEY}`,
-      }
+      },
     }
   );
   const data = await res.json();
@@ -61,6 +63,66 @@ export const getSearchedMovies = async (searchValue: string) => {
 export const getMovieDetail = async (movieId: string) => {
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}?language=en-US`,
+    {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_KEY_TMDB_ACCESS_KEY}`,
+      },
+    }
+  );
+  const data = await res.json();
+  return data;
+};
+
+export const getMoviesDescribtion = async (MovieId: string) => {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/movie/${MovieId}?language=en-US`,
+    {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_KEY_TMDB_ACCESS_KEY}`,
+      },
+    }
+  );
+  const data = await res.json();
+  return data;
+};
+
+export const getMoviesDirectorName = async (id: string) => {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/movie/${id}?language=en-US`,
+    {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_KEY_TMDB_ACCESS_KEY}`,
+      },
+    }
+  );
+  const data = await res.json();
+  return data;
+};
+
+export const getMoviesMoreLike = async (id: string) => {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/movie/${id}?language=en-US`,
+    {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_KEY_TMDB_ACCESS_KEY}`,
+      },
+    }
+  );
+  const data = await res.json();
+  return data;
+};
+
+export const getMoviesTrailer = async (id: string) => {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/movie/${id}?language=en-US`,
     {
       method: "GET",
       headers: {

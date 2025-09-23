@@ -4,7 +4,7 @@ import { Genre } from "./list";
 import { Input } from "../ui/input";
 import Link from "next/link";
 import { GenreDropdown } from "@/components/home/Genre";
-import {SearchSection} from "@/components/home/ShearcSection"
+import { SearchSection } from "@/components/home/SearcSection";
 import { Search } from "lucide-react";
 
 export const Header = () => {
@@ -22,7 +22,7 @@ export const Header = () => {
         <GenreDropdown />
         {/* <Input placeholder="Shearch.." className="w-[379px] h-[36px]" /> */}
         <div>
-            <SearchSection />
+          <SearchSection />
         </div>
       </div>
       <ThemeMenu />

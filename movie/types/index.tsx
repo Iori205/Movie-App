@@ -9,6 +9,24 @@ export type MovieType = {
   release_date: string;
   title: string;
   vote_average: number;
+  runtime: number;
+  genres: CrewType[];
+
+  vote_count: number;
+  src: string;
+  // type: string;
+  key: string;
+  name: string;
+};
+
+export type CrewType = {
+  job: string;
+  name: string;
+};
+
+export type DirectorName = {
+  cast: CrewType[];
+  crew: CrewType[];
 };
 
 export type movieResponseType = {
