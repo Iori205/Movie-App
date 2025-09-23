@@ -3,18 +3,20 @@ type MovieType = {
   title: string;
   score: number | string;
   releaseYear: string;
+  image: string
 };
 
 export const SearchSectionResult = ({
   title,
   score,
   releaseYear,
+  image
 }: MovieType) => {
   return (
     <div className="flex flex-col">
       <div className="w-[533px] h-[116px] flex items-center justify-center gap-4">
         <div className="bg-gray-800 w-[67px] h-25">
-          <img src="#" alt="#" />
+          {image}
         </div>
         <div className="w-[454px] h-[99px]">
           <div className="w-[454px] h-[51px]">

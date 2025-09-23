@@ -26,7 +26,7 @@ export const MoviesContainer = ({
         <Link href={`/see-more?title=${link}`}>
           <Button
             variant="ghost"
-            className="text-sm text-[#09090B] font-medium leading-5"
+            className="text-sm font-medium leading-5"
           >
             See more <GrLinkNext />
           </Button>

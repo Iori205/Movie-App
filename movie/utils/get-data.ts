@@ -1,4 +1,4 @@
-import Movieid from "@/app/detail/page";
+import Movieid from "@/app/detail/[id]/page";
 
 export const getMoviesList = async (listName: string) => {
   const res = await fetch(
@@ -92,7 +92,7 @@ export const getMoviesDescribtion = async (MovieId: string) => {
 
 export const getMoviesDirectorName = async (id: string) => {
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}?language=en-US`,
+    `https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`,
     {
       method: "GET",
       headers: {
@@ -107,7 +107,7 @@ export const getMoviesDirectorName = async (id: string) => {
 
 export const getMoviesMoreLike = async (id: string) => {
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}?language=en-US`,
+    `https://api.themoviedb.org/3/movie/${id}/similar?language=en-US&page=1`,
     {
       method: "GET",
       headers: {

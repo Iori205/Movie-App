@@ -25,7 +25,7 @@ type MorePageProps = {
   return (
     <div className="max-w-[1280px] m-auto">
       <div className="flex flex-col justify-center">
-        <h2 className="text-3xl font-bold">{headerTitle}</h2>
+        <h2 className="text-3xl font-bold pb-8">{headerTitle}</h2>
         <div className="flex gap-4 flex-wrap">
           {moviesRes.results.map((movie) => (
           <MovieCard

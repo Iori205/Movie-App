@@ -25,7 +25,8 @@ const Genre = async ({ searchParams }: GenrePageProps) => {
   const genresResponse: GenreResponseType = await getMovieGenres();
   return (
     <div className="max-w-[1440px] m-auto flex justify-end">
-      <div></div>
+      <div>
+      </div>
       <div className="max-w-[806px]">
         <span className="text-[#09090B] font-semibold text-xl leading-8">
           {name}

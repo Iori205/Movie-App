@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className="px-[80px] py-[40px] flex justify-between">
         <div>
           <div className="flex gap-2 pb-3">
-            <img className="w-[16px] h-[16px]" src="images/film.png" alt="" />
+            <img className="w-[16px] h-[16px]" src="/images/film.png" alt="" />
             <h2 className="text-base font-bold leading-4 text-[#FAFAFA]">
               Movie Z
             </h2>
