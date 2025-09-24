@@ -1,7 +1,5 @@
 import { FaStar } from "react-icons/fa";
 import { getMovieDetail } from "@/utils/get-data";
-
-// import { Youtubedialog } from "./Youtubedialog";
 type Crewtype = {
   name: string;
   job: string;
@@ -48,7 +46,7 @@ MovieCardProps) => {
         <div>
           <div className="text-[36px] font-bold">{title}</div>
           <div>
-            {releasedate} PG {Math.floor(runtime / 60)} h {runtime % 60} min
+            {releasedate} · PG · {Math.floor(runtime / 60)} h {runtime % 60} min
           </div>
         </div>
 
@@ -74,13 +72,13 @@ MovieCardProps) => {
           width={290}
         />
 
-        {/* <div>
-          <Youtubedialog
+        <div>
+          {/* <Youtubedialog
             image={backdrop_path}
             Movietrailer={Movietrailer}
             title={type}
-          ></Youtubedialog>
-        </div> */}
+          ></Youtubedialog> */}
+        </div>
       </div>
       <div className="flex gap-4 mt-10">
         {genres.map((genre, index) => (
