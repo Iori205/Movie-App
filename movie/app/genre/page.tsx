@@ -37,26 +37,7 @@ const Genre = async ({ searchParams }: GenrePageProps) => {
   return (
     <div className="max-w-[1440px] m-auto flex justify-end">
       <div>
-        {/* <DropdownMenu>
-          <DropdownMenuLabel className="text-2xl font-bold">
-            Genres
-          </DropdownMenuLabel>
-          <p className="px-2">See list of movies by genre</p>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem className="hover:!bg-transparent max-w-[400px] flex flex-wrap">
-            {genresResponse.genres.map((genre) => (
-              <Link
-                key={genre.id}
-                href={`/genre?id=${genre.id}&name=${genre.name}`}
-              >
-                <Badge variant="outline">
-                  {genre.name}
-                  <ChevronRight />
-                </Badge>
-              </Link>
-            ))}
-          </DropdownMenuItem>
-        </DropdownMenu> */}
+        
       </div>
       <div className="max-w-[806px]">
         <span className="text-[#09090B] font-semibold text-xl leading-8">

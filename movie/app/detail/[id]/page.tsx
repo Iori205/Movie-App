@@ -42,7 +42,6 @@ const Movieid = async ({ params }: MovieidPageProps) => {
         crew={Moviedirectorname.crew}
         cast={Moviedirectorname.cast}
         vote_count={Moviebyid.vote_count}
-        // type={Movietrailer.results[0].name}
       ></Moviedescribecard>
 
       <div className="flex items-center justify-between mt-10 ml-42 w-[1200px]">

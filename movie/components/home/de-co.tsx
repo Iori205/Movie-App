@@ -20,8 +20,6 @@ type MovieCardProps = {
   crew: Crewtype[];
   cast: Crewtype[];
   vote_count: number;
-  // Movietrailer: any;
-  // type: string;
 };
 
 export const Moviedescribecard = ({
@@ -36,8 +34,7 @@ export const Moviedescribecard = ({
   crew,
   cast,
   vote_count,
-}: // Movietrailer,
-// type,
+}: 
 MovieCardProps) => {
   return (
     <div className="w-[1068px] h-fit ml-42">
@@ -73,11 +70,6 @@ MovieCardProps) => {
         />
 
         <div>
-          {/* <Youtubedialog
-            image={backdrop_path}
-            Movietrailer={Movietrailer}
-            title={type}
-          ></Youtubedialog> */}
         </div>
       </div>
       <div className="flex gap-4 mt-10">
