@@ -11,11 +11,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { MovieType } from "@/types";
-import { PiX } from "react-icons/pi";
-import { Fullscreen } from "lucide-react";
 import { FaStar } from "react-icons/fa";
-import { Button } from "@/components/ui/button";
-import { SiGoogledisplayandvideo360 } from "react-icons/si";
+import { TrailerDialog } from "./TrailerDialog";
+import { getMoviesTrailer } from "@/utils/get-data";
 
 type MovieCarouselProps = {
   movies: MovieType[];
@@ -82,13 +80,7 @@ export function MovieCarousel({
                           {movie.overview}
                         </span>
                       </div>
-                      <Button
-                        variant="outline"
-                        className="text-sm font-medium leading-5"
-                      >
-                        <SiGoogledisplayandvideo360 />
-                        Watch Trailer
-                      </Button>
+                      <TrailerDialog youtubeKey="" />
                     </div>
                   </CardContent>
                   <div className="flex gap-2 absolute bottom-[37px] pl-[679px]">

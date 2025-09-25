@@ -7,6 +7,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { SiGoogledisplayandvideo360 } from "react-icons/si";
 
 export const TrailerDialog = ({
   youtubeKey,
@@ -16,7 +17,10 @@ export const TrailerDialog = ({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>Watch trailer</Button>
+        <Button variant="outline" className="text-sm font-medium leading-5">
+          <SiGoogledisplayandvideo360 />
+          Watch Trailer
+        </Button>
       </DialogTrigger>
       <DialogContent className="p-0 sm:max-w-4xl rounded-none">
         <DialogHeader>
